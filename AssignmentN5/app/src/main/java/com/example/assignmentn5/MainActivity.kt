@@ -41,12 +41,12 @@ class MainActivity : AppCompatActivity() {
             } else {
                 val runDist=App.instance.db.userDao().avgOfRunDis().toString()
                 val totalRun=App.instance.db.userDao().totalOfRunDis().toString()
-                info1.append("$runDist\n$totalRun")
+                info1.text = ("$runDist $totalRun").toDouble().toString()
 
                 val swimDist = App.instance.db.userDao().avgOfSwimDis().toString()
-                info2.append(swimDist)
+                info2.text=swimDist.toDouble().toString()
                 val cal = App.instance.db.userDao().avgOfcals().toString()
-                info3.append(cal)
+                info3.text= cal.toDouble().toString()
 
                 clear()
                 }
